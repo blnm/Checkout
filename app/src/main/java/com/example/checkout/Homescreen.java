@@ -14,10 +14,15 @@ public class Homescreen extends AppCompatActivity {
     }
     public void barcode(View view){
         Intent startNewIntent = new Intent(this, MainActivity.class);
-                startActivity(startNewIntent);
+        startActivity(startNewIntent);
     }
-    public void stock(View view){
+    public void stock(View view) {
         Intent startNewIntent = new Intent(this, Stock.class);
+        startActivity(startNewIntent);
+    }
+
+    public void missing(View view){
+        Intent startNewIntent = new Intent(this, Missing.class);
         startActivity(startNewIntent);
     }
 }
