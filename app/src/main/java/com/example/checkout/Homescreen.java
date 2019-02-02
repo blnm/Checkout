@@ -12,9 +12,13 @@ public class Homescreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homescreen);
     }
-    public void sendMessage(View view){
+    public void barcode(View view){
         Intent startNewIntent = new Intent(this, MainActivity.class);
                 startActivity(startNewIntent);
+    }
+    public void stock(View view){
+        Intent startNewIntent = new Intent(this, Stock.class);
+        startActivity(startNewIntent);
     }
 }
 
