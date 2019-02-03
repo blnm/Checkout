@@ -3,7 +3,7 @@
     package="com.example.checkout">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Missing"></activity>
+        <activity android:name=".StockList"></activity>
+        <activity android:name=".Missing" />
         <activity android:name=".Stock" />
         <activity android:name=".Homescreen">
             <intent-filter>

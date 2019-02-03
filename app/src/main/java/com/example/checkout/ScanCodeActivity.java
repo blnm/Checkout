@@ -1,16 +1,23 @@
 package com.example.checkout;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.google.zxing.Result;
+
+import java.util.ArrayList;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
-    static String prod_name = "";
+    public static String prod_name = "";
     static double price     = 0;
+
+    public static String[] temp = {};
 
     ZXingScannerView ScannerView;
 
@@ -19,6 +26,8 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
         super.onCreate(savedInstanceState);
         ScannerView = new ZXingScannerView(this);
         setContentView(ScannerView);
+
+
     }
 
     @Override
@@ -29,6 +38,13 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
         barcode.execute();
 
         MainActivity.resultTextView.setText(prod_name + " " + price);
+        temp = new String[] {prod_name};
+
+
+        Intent intent = new Intent(ScanCodeActivity.this, StockList.class);
+        intent.putExtra("list",temp);
+        startActivity(intent);
+
 
         onBackPressed();
 

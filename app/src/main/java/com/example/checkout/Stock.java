@@ -16,5 +16,9 @@ public class Stock extends AppCompatActivity {
             Intent startNewIntent = new Intent(this, MainActivity.class);
             startActivity(startNewIntent);
         }
+        public void printList(View view){
+        Intent startNewIntent = new Intent(this, StockList.class);
+        startActivity(startNewIntent);
+    }
 }
 
