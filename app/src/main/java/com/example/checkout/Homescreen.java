@@ -18,7 +18,7 @@ public class Homescreen extends AppCompatActivity {
     }
     public void stock(View view) {
         Intent startNewIntent = new Intent(this, Stock.class);
-        startActivity(startNewIntent);
+        startActivity(startNewIntent );
     }
 
     public void missing(View view){
