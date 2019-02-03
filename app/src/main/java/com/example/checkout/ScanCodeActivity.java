@@ -8,7 +8,7 @@ import com.google.zxing.Result;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
-
+    private static final String FILE_NAME = "barcodes.txt";
 
     ZXingScannerView ScannerView;
 
