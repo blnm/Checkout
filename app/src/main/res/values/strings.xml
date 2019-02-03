@@ -3,8 +3,16 @@
     <string name="welcome">Welcome to Checkout!</string>
     <string name="welcome2">What would you like to do?</string>
     <string name="button">Scan a barcode?</string>
-    <string name="button1">Check Current Grocery Stock</string>
-    <string name="button2">What am I missing?</string>
+    <string name="button1">"Current Grocery Stock"</string>
+    <string name="button2">"Grocery List"</string>
+    <string name="stock">"Grocery Stock Options"</string>
+    <string name="fridge">"What's in my fridge?"</string>
+    <string name="add">"Scan an item into my list"</string>
+    <string name="list">"Give me my current grocery list"</string>
+    <string name="scan">"Scan an item"</string>
+    <string name="print">"Print my list on my phone"</string>
+    <string name="msg">"Send my list via SMS"</string>
+    <string name="grocery">"Grocery List Options"</string>
 
 
 </resources>
