@@ -9,6 +9,8 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
+    static String prod_name = "";
+    static double price     = 0;
 
     ZXingScannerView ScannerView;
 
@@ -21,8 +23,13 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
 
     @Override
     public void handleResult(Result result) {
+        // scan result in result.getText
+        GetBarcodeDetail barcode = new GetBarcodeDetail();
+        barcode.barcode = result.getText();
+        barcode.execute();
 
-        MainActivity.resultTextView.setText(result.getText());
+        MainActivity.resultTextView.setText(prod_name + " " + price);
+
         onBackPressed();
 
     }
